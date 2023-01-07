@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.Media;
 
 namespace ShitHappens
 {
@@ -39,6 +40,13 @@ namespace ShitHappens
         public FormManager()
         {
             var controller = new MainMenuController(CreateForm<MainMenuForm>());
+            try
+            {
+                SoundPlayer bckGround = new SoundPlayer();
+                bckGround.SoundLocation = "background.wav";
+                bckGround.PlayLooping();
+            }
+            catch (Exception) { }
         }
     }
 }

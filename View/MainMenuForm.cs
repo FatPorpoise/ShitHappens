@@ -22,12 +22,6 @@ namespace ShitHappens.View
         public MainMenuForm()
         {
             InitializeComponent();
-            try
-            {
-                SoundPlayer bckGround = new SoundPlayer();
-                bckGround.SoundLocation = "background.wav";
-                bckGround.PlayLooping();
-            }catch(Exception){}
         }
         //public void SetController(MainMenuController controller)
         //{
